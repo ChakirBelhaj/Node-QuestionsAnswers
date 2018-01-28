@@ -42,7 +42,8 @@ user.create = function(req, res) {
 };
 
 // Save new user
-user.save = function(req, res) {
+user.register = function(req, res) {
+    res.render('register', { title: 'Register' });
 };
 
 // Edit an user

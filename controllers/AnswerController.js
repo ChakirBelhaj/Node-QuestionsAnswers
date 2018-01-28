@@ -13,7 +13,8 @@ answer.create = function(req, res) {
 };
 
 // Save new answers
-answer.save = function(req, res) {
+answer.add = function(req, res) {
+    res.send('comment added');
 };
 
 // Edit an answers

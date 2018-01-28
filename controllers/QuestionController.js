@@ -25,6 +25,10 @@ question.create = function(req, res) {
     res.redirect('/index');
 };
 
+question.addquestion = function(req, res) {
+    res.render('addquestions');
+};
+
 // Save new questions
 question.save = function(req, res) {
 };

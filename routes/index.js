@@ -6,44 +6,30 @@ var answer = require("../controllers/AnswerController.js");
 var fs = require('fs');
 
 /* routes */
-router.get('/login', user.show);
 
+router.get('/register'          , user.register);
+router.post('/register'         , user.create);
 
+router.get('/login'             , user.show);
+router.post('/login'            , user.showindex);
 
+router.get('/'                  , question.show);
+router.post('/'                 , question.show);
+
+router.get('/addquestions'      , question.addquestion);
+router.post('/addquestions'     , question.create);
+
+router.get('/formeditquestion'  , question.editform);
+router.get('/editquestion'      , question.edit);
+router.get('/deletequestion'    , question.delete);
+router.get('/upvote'            , question.upvote);
+router.get('/downvote'          , question.downvote);
+
+router.get('/index'             , question.show);
+router.get('/question/:id'      , question.getQuestionOnId);
 router.get('/formeditanswer'    , answer.editform);
 router.get('/editanswer'        , answer.edit);
 router.get('/deleteanswer'      , answer.delete);
-
-router.get('/formeditquestion'  ,  question.editform);
-router.get('/editquestion'      ,  question.edit);
-router.get('/deletequestion'    ,  question.delete);
-router.get('/upvote'            ,  question.upvote);
-router.get('/downvote'          ,  question.downvote);
-
-router.post('/login', user.showindex);
-
-
-
-router.post('/addanswer', function(req, res, next) {
-    res.send('comment added');
-});
-
-router.get('/index', question.show);
-router.get('/question/:id', question.getQuestionOnId);
-
-router.get('/addquestions', function(req, res, next) {
-    res.render('addquestions');
-});
-router.post('/addquestions', question.create);
-
-router.get('/', question.show);
-router.post('/', question.show);
-
-
-router.get('/register', function(req, res, next) {
-    res.render('register', { title: 'Register' });
-});
-
-router.post('/register', user.create);
+router.post('/addanswer'        , answer.add);
 
 module.exports = router;
