@@ -1,14 +1,11 @@
 var question = {};
-
+const fs = require('fs');
 // Show list of questions
 question.list = function(req, res) {
 };
 
 // Show questions
 question.show = function(req, res) {
-    'use strict';
-    const fs = require('fs');
-
     fs.readFile('QuestionsAnswers.json', 'utf8', function readFileCallback(err, data){
         if (err){
             console.log(err);
