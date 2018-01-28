@@ -1,0 +1,31 @@
+<% include header.ejs %>
+<a href="/upvote" class="btn btn-success">upvote</a>
+<a href="/downvote" class="btn btn-danger">downvote</a>
+
+
+<% console.log(question['answer1']) %>
+<h2>0</h2>
+<h1><%= question['question'] %></h1>
+        <h2><%= question['answer1'] %></h2>
+        <a href="/formeditanswer" class="btn btn-primary">edit</a>
+        <a href="/deleteanswer" class="btn btn-danger">delete</a>
+        <h2><%= question['answer2'] %></h2>
+        <a href="/formeditanswer" class="btn btn-primary">edit</a>
+        <a href="/deleteanswer" class="btn btn-danger">delete</a>
+        <h2><%= question['answer3'] %></h2>
+        <a href="/formeditanswer" class="btn btn-primary">edit</a>
+        <a href="/deleteanswer" class="btn btn-danger">delete</a>
+
+
+
+<form action="/question/<%=id%>%>" method="get">
+    <div class="form-group">
+        <br>
+        <textarea class="form-control" name="comment" form="answer">Enter text here...</textarea>
+        <center> <input    class="form-button" type="submit"> </center>
+    <div>
+</form>
+
+
+
+<% include footer.ejs %>

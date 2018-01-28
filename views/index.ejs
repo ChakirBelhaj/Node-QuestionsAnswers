@@ -1,0 +1,17 @@
+<% include header.ejs %>
+    <h1>Question and Answers</h1>
+
+<!--loops through questionanswersjson-->
+    <% for (var key in obj) { %>
+    <% if (obj.hasOwnProperty(key)) { %>
+    <% var test = obj[key] %>
+    <% for (var result in test['cards'] ) { %>
+    <% console.log(result)%>
+    <a href="/question/<%=result%>"><h1><%= test['cards'][result]['question'] %></h1></a>
+    <a href="/formeditquestion" class="btn btn-primary">edit</a>
+    <a href="/deletequestion" class="btn btn-danger">delete</a>
+    <% } %>
+    <% } %>
+    <% } %>
+
+<% include footer.ejs %>

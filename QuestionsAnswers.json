@@ -1,0 +1,25 @@
+{
+  "data": {
+      "title": "king",
+      "cards":[
+        {
+          "question": "How to become a president",
+          "answer1": "Become rich",
+          "answer2": "answer2",
+          "answer3": "answer3"
+        },
+        {
+          "question": "Surviving in africa",
+          "answer1": "Become rich",
+          "answer2": "answer2",
+          "answer3": "answer3"
+        },
+        {
+          "question": "Question about animals",
+          "answer1": "Become rich",
+          "answer2": "answer2",
+          "answer3": "answer3"
+        }
+      ]
+    }
+}
